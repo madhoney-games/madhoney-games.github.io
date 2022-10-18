@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mad Honey</title>
-    <link rel="icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <ul>
       <li><a href="index.html" class="active">Inicio</a></li>
       <li><a href="devlog.html">Devlog</a></li>
-      <li><a href="upap/pixel-art.html">Juegos</a></li>
+      <li><a href="games.html">Juegos</a></li>
       <li><a href=mailto:contacto@lacolmenastudios.com>Contacto</a></li>
     </ul>
   </header>
@@ -71,4 +71,27 @@
     })
   </script>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAMVSmNIUR5ym87J9V4jM7ufXrJXFYsuLY",
+    authDomain: "mad-honey-website.firebaseapp.com",
+    projectId: "mad-honey-website",
+    storageBucket: "mad-honey-website.appspot.com",
+    messagingSenderId: "560243633642",
+    appId: "1:560243633642:web:6148f383883189b8bf9693",
+    measurementId: "G-4ZGFR525CC"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
