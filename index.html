@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mad Honey</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -22,8 +22,6 @@
     <img src="stars.png" id="stars">
     <img src="moon.png" id="moon">
     <img src="mountains_background.png" id="mountains_background">
-    <h2 id="text">Hola</h2>
-    <a href="#section" id="btn">Continuar</a>
     <img src="mountains_foreground.png" id="mountains_foreground">
   </section>
   <div class="section" id="section">
@@ -53,8 +51,6 @@
     let stars = document.getElementById('stars');
     let moon = document.getElementById('moon');
     let mountains_background = document.getElementById('mountains_background');
-    let text= document.getElementById('text');
-    let btn = document.getElementById('btn');
     let mountains_foreground = document.getElementById('mountains_foreground');
     let header = document.querySelector('header');
     
@@ -64,34 +60,7 @@
       moon.style.top = value * 1.05 + 'px';
       mountains_background.style.top = value * 0.5 + 'px';
       mountains_foreground.style.top = value * 0 + 'px';
-      text.style.marginRight = value * 5 + 'px';
-      text.style.marginTop = value * 1.5 + 'px';
-      btn.style.marginTop = value * 1.5 + 'px';
-      header.style.top = value * 0.5 + 'px';
     })
   </script>
 </body>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAMVSmNIUR5ym87J9V4jM7ufXrJXFYsuLY",
-    authDomain: "mad-honey-website.firebaseapp.com",
-    projectId: "mad-honey-website",
-    storageBucket: "mad-honey-website.appspot.com",
-    messagingSenderId: "560243633642",
-    appId: "1:560243633642:web:6148f383883189b8bf9693",
-    measurementId: "G-4ZGFR525CC"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 </html>

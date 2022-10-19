@@ -7,70 +7,59 @@
     font-family: 'Silkscreen';
     scroll-behavior: smooth;
 }
-body
-{
+body {
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(#006746, #460067);
+    /* height: 100vh; */
+    background: #460067;
 }
-header
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 100;
-}
-header .logo
-{
-    color: #ffbd33;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 100%;
-    text-transform: uppercase;
-   /* letter-spacing: 1px; */
-    justify-content: space-evenly;
-    align-items: center;
-}
-header img
-{
+header {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none;
+    padding: 1em 1em;
+    display: flex;
+    justify-content: space-evenly;
+    background: #006746;
+    align-items: center;
+    z-index: 100;
 }
-header ul
-{
+header .logo {
+    color: #ffbd33;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-header ul li
-{
+header ul li {
     list-style: none;
     margin-left: 2%;
 }
-header ul li a
-{
+header ul li a {
     text-decoration: none;
-    /* padding: 6px 15px; */
+    padding: 0.5rem;
     color: #ffbd33;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
-header ul li a:hover,
-header ul li a.active
-{
+header ul li a:hover {
+    background: #460067;
+    color: #ffbd33;
+
+}
+header ul li a.active {
     background: #ffbd33;
     color: #460067;
 }
-section
-{
+section {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -78,72 +67,44 @@ section
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(#006746, #460067);
 }
-section::before
-{
+section::before {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 4rem;
     background: linear-gradient(to top, #460067, transparent);
-    z-index: 100;
+    z-index: 99;
 }
-section img
-{
+section img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     pointer-events: none;
 }
-section img#moon
-{
+section img#moon {
     mix-blend-mode: screen;
 }
-section img#mountains_foreground
-{
+section img#mountains_foreground {
     z-index: 10;
 }
-#text
-{
-    position: absolute;
-    right: -1000px;
-    color: #ffbd33;
-    white-space: nowrap;
-    font-size: 7vw;
-    z-index: 9;
-    transform: translateY(-100px);
-}
-#btn
-{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
-    background: #ffbd33;
-    color: #460067;
-    font-size: 1.5em;
-    z-index: 9;
-    transform: translateY(50px);
-}
-.section
-{
+.section {
     position: relative;
-    padding: 100px;
-    background: #460067;
+    padding: 1em;
+    /* background: #460067; */
 }
-.section h2
-{
+.section h2 {
     text-align: center;
-    font-size: 3.5em;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 1em;
     color: #ffbd33;
 }
-.section p
-{
-    font-size: 1.2em;
+.section p {
+    font-size: 1rem;
     color: #ffbd33;
 }
