@@ -9,7 +9,6 @@
 }
 body {
     align-items: center;
-    background: #460067;
 }
 header {
     position: relative;
@@ -98,6 +97,7 @@ section img#mountains_foreground {
 .section {
     position: relative;
     padding: 4em;
+    background: #460067;
 }
 .section h2 {
     text-align: center;
@@ -109,6 +109,24 @@ section img#mountains_foreground {
     color: #ffbd33;
 }
 .section a {
+    font-size: 1rem;
+    color: #ffbd33;
+}
+.container {
+    position: relative;
+    padding: 4em;
+    background: #670055;
+}
+.container h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: #ffbd33;
+}
+.container p {
+    font-size: 1rem;
+    color: #ffbd33;
+}
+.container a {
     font-size: 1rem;
     color: #ffbd33;
 }
