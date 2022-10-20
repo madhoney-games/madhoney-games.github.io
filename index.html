@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mad Honey</title>
-    <link rel="icon" href="favicon.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <header>
     <a href="#" class="logo">Mad Honey</a>
-    <ul>
-      <li><a href="index.html" class="active">Inicio</a></li>
-      <li><a href="devlog.html">Devlog</a></li>
-      <li><a href="upap/pixel-art.html">Juegos</a></li>
-      <li><a href=mailto:contacto@lacolmenastudios.com>Contacto</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="#">Devlog</a></li>
+        <li><a href="upap/pixel-art.html">Juegos</a></li>
+        <li><a href="#"">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
   <section>
-    <img src="stars.png" id="stars">
-    <img src="moon.png" id="moon">
-    <img src="mountains_background.png" id="mountains_background">
-    <img src="mountains_foreground.png" id="mountains_foreground">
+    <img src="img/stars.png" id="stars">
+    <img src="img/moon.png" id="moon">
+    <img src="img/background.png" id="background">
+    <img src="img/foreground.png" id="foreground">
   </section>
   <div class="section" id="section">
     <h2>Título</h2>
@@ -50,16 +52,15 @@
   <script>
     let stars = document.getElementById('stars');
     let moon = document.getElementById('moon');
-    let mountains_background = document.getElementById('mountains_background');
-    let mountains_foreground = document.getElementById('mountains_foreground');
-    let header = document.querySelector('header');
+    let background = document.getElementById('background');
+    let foreground = document.getElementById('foreground');
     
     window.addEventListener('scroll', function(){
       let value = window.scrollY;
       stars.style.left = value * 0.25 + 'px';
-      moon.style.top = value * 1.05 + 'px';
-      mountains_background.style.top = value * 0.5 + 'px';
-      mountains_foreground.style.top = value * 0 + 'px';
+      moon.style.top = value * 0.75 + 'px';
+      background.style.top = value * 0.5 + 'px';
+      foreground.style.top = value * 0.0 + 'px';
     })
   </script>
 </body>
