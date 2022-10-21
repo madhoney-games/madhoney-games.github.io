@@ -23,6 +23,11 @@ header {
     align-items: center;
     z-index: 100; 
 }
+@media (min-width: 62rem) {
+    header {
+        flex-direction: initial;
+    }
+}
 .logo {
     color: #ffbd33;
     font-weight: 700;
@@ -45,6 +50,11 @@ header li {
 }
 header nav ul {
     flex-direction: column;
+}
+@media (min-width: 62rem) {
+    header nav ul {
+        flex-direction: initial;
+    }
 }
 header nav a {
     text-decoration: none;
