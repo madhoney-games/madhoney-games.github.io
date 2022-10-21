@@ -110,8 +110,14 @@ section img#mountains_foreground {
 }
 .section {
     position: relative;
-    padding: 4em;
+    padding: 1em;   
     background: #460067;
+}
+@media (min-width: 62rem) {
+    .section {
+        padding: 4em;   
+    }
+    
 }
 .section h2 {
     text-align: center;
@@ -128,8 +134,14 @@ section img#mountains_foreground {
 }
 .container {
     position: relative;
-    padding: 4em;
+    padding: 1em;
     background: #670055;
+}
+@media (min-width: 62rem) {
+    .container {
+        padding: 4em;   
+    }
+    
 }
 .container h2 {
     text-align: center;
