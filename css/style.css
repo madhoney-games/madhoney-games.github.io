@@ -182,7 +182,7 @@ footer {
     z-index: 100;
 }
 footer p {
-    width: 60%;
+    width: 80%;
     text-align: center;
     font-size: 0.5rem;
     color: #ffbd33;
@@ -206,6 +206,5 @@ footer img {
     footer p {
         width: 23%;
         text-align: end;
-    }
-    
+    } 
 }
