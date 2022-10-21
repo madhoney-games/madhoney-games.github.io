@@ -43,7 +43,6 @@ header nav ul {
     flex-direction: column;
 }
 header nav a {
-    text-decoration: none;
     padding: 0.5rem;
     color: #ffbd33;
     border-radius: 1rem;
@@ -95,17 +94,29 @@ section img#mountains_foreground {
 }
 .section {
     position: relative;
-    padding: 1em;   
+    display: flex;
+    flex-direction: column;
+    padding: 2em;  
     background: #460067;
 }
 .section h2 {
+    padding: 1em 0;
     color: #ffbd33;
 }
 .section p {
     color: #ffbd33;
 }
 .section a {
+    padding: 0.5rem;
+    width: 8rem;
+    justify-content: space-between;
+    background: #ffbd33;
+    color: #460067;
+    border-radius: 2rem;
+}
+.section a:hover {
     color: #ffbd33;
+    background: #460067;
 }
 .container {
     position: relative;
@@ -115,6 +126,7 @@ section img#mountains_foreground {
     background: #670055;
 }
 .container h2 {
+    padding: 1em 0;
     color: #ffbd33;
 }
 .container p {
@@ -129,6 +141,7 @@ section img#mountains_foreground {
 }
 .container img {
     width: 100%;
+    background: #000;
     height: 16rem;
     object-fit: scale-down;
 }
@@ -208,23 +221,26 @@ header nav a {
 }
 .section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .section p {
     font-size: 1rem;
 }
 .section a {
+    text-decoration: none;
     font-size: 1rem;
+    text-align: center;
 }
 .container h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .container p {
     font-size: 1rem;
 }
 .container a {
     font-size: 1rem;
+    text-decoration: none;
 }
 .container article h1 {
     font-size: 1em;
