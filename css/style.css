@@ -96,8 +96,7 @@ section img#mountains_foreground {
 .section {
     position: relative;
     display: flex;
-    flex-direction: column;
-    padding: 1rem;  
+    flex-direction: column; 
     background: #460067;
 }
 .section h2 {
@@ -127,7 +126,7 @@ section img#mountains_foreground {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 2rem;
+    padding: 0 0 2rem;
     background: #670055;
 }
 div h2 {
