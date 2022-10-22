@@ -152,7 +152,6 @@ section img#mountains_foreground {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 0 0 2rem;
     background: #670055;
 }
 div h2 {
@@ -167,7 +166,7 @@ div h2 {
     color: #ffbd33;
 }
 .container article {
-    padding: 0 1rem 2rem;
+    padding: 0 1rem 1rem;
     color: #ffbd33;
     display: flex;
     flex-direction: column;
@@ -233,7 +232,11 @@ footer img {
     }
     .container {
         padding: 0 4em 4em;
-        flex-direction: initial;  
+        flex-direction: initial;
+        justify-content: space-evenly;  
+    }
+    .container article {
+        width: 24rem;
     }
     footer {
         flex-direction: initial;
