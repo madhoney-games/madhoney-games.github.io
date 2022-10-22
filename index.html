@@ -12,7 +12,7 @@
 <body>
   <header>
     <a href="http://www.madhoney.games" class="logo">Mad Honey</a>
-    <nav class="menu">
+    <nav class="menu" id="menu">
       <ul>
         <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="blog.html">Noticias</a></li>
@@ -20,7 +20,7 @@
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
-    <ul class="menu">
+    <ul class="menu" id="menu">
       <li><a href="https://www.instagram.com/madhoney.games" target="_blank" rel="noopener noreferrer">
         <img src="img/ig_logo_RGB-Black_504.png" alt="Instagram"></a></li>
       <li><a href="https://www.youtube.com/channel/UCQxP2oPvZ0Izm56FaKJhpwg" target="_blank" rel="noopener noreferrer">
@@ -34,6 +34,11 @@
       <li><a href="https://www.twitch.tv" target="_blank" rel="noopener noreferrer">
         <img src="img/TwitchGlitchWhite.png" alt="Twitch"></a></li>
     </ul>
+    <div class="toggle-button" id="toggle-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
   <section>
     <img src="img/stars.png" id="stars">
@@ -116,18 +121,5 @@
     <p>© 2022 Mad Honey. Todos los derechos reservados. La Colmena Studios S. de R.L. de C.V.</p>
   </footer>
 </body>
-<script>
-  let stars = document.getElementById('stars');
-  let moon = document.getElementById('moon');
-  let background = document.getElementById('background');
-  let foreground = document.getElementById('foreground');
-  
-  window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    stars.style.left = value * 0.25 + 'px';
-    moon.style.top = value * 0.75 + 'px';
-    background.style.top = value * 0.5 + 'px';
-    foreground.style.top = value * 0.0 + 'px';
-  })
-</script>
+<script src="js/main.js"></script>
 </html>
