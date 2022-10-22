@@ -70,6 +70,7 @@ header img {
 }
 .toggle-button {
     position: absolute;
+    top: 0rem;
     left: 1rem;
     display: flex;
     flex-direction: column;
@@ -257,7 +258,6 @@ footer img {
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
 header nav a {
