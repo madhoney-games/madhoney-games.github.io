@@ -72,7 +72,7 @@ header img {
 .toggle-button {
     position: absolute;
     top: 0.5rem;
-    right: 1rem;
+    left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
