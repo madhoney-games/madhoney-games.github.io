@@ -1,10 +1,8 @@
 let toggleButton = document.getElementsByClassName('toggle-button')[0]; 
 let navMenu = document.getElementsByClassName('menu')[0];
-let navIcons = document.getElementsByClassName('menu')[1];
 
 toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active')
-    navIcons.classList.toggle('active')
 })
 
 let stars = document.getElementById('stars');
