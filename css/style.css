@@ -68,6 +68,7 @@ header img {
 .logo {
     justify-content: space-evenly;
     align-items: center;
+    padding: 1rem;
     height: 3rem;
     border: var(--border);
     color: var(--light-color);
@@ -244,7 +245,6 @@ footer img {
     }
     .logo {
         width: 19rem;
-        padding-bottom: 0.25rem;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -296,10 +296,12 @@ footer img {
 * {
     font-family: 'Silkscreen';
     text-decoration: none;
+}
+header {
     text-align: center;
 }
 .logo {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .index li {
     font-size: 1rem;
