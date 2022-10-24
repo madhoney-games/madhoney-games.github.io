@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Silkscreen:300,400,500,600,700,800,900&display=swap');
 
-:root {
-    /* Colors */
+/* --------------------------------------------------------------------------- */
+/* Variables */
+/* --------------------------------------------------------------------------- */
 
+:root {
     --primary-color: #006746;
     --secondary-color: #460067;
     --tertiary-color: #670055;
     --light-color: #ffbd33;
     --dark-color:#D59000;
 
-    /* Layout */
-
     --border: /* 1px solid var(--light-color) */ 0;
 } 
+
+/* --------------------------------------------------------------------------- */
 /* Layout */
+/* --------------------------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -38,16 +41,6 @@ header img {
     height: 1rem;
     object-fit: cover;
 }
-.index li:hover {   
-    background: #460067;
-    color: #ffbd33;
-}
-.index li.active {
-    background: #ffbd33;
-}
-.index a.active {
-    color: #460067;
-}
 .toggle-button {
     border: var(--border);
     position: absolute;
@@ -71,7 +64,6 @@ header img {
     padding: 1rem;
     height: 3rem;
     border: var(--border);
-    color: var(--light-color);
 }
 .menu {
     display: none;
@@ -80,6 +72,15 @@ header img {
 }
 .menu.active {
     display: flex;
+}
+.index li:hover {   
+    background: var(--secondary-color);
+}
+.index li.active {
+    background: var(--light-color);
+}
+.index a.active {
+    color: var(--secondary-color);
 }
 .index li {
     padding: 0.5rem;
@@ -97,8 +98,7 @@ header img {
     padding: 0.5rem;
     border: var(--border);
 }
-
-section {
+.main-cover {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -106,18 +106,18 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(var(--primary-color), #460067);
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
-section::before {
+.main-cover::before {
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 3rem;
-    background: linear-gradient(to top, #460067, transparent);
+    background: linear-gradient(to top, var(--secondary-color), transparent);
     z-index: 99;
 }
-section img {
+.main-cover img {
     position: absolute;
     top: 0;
     left: 0;
@@ -126,67 +126,50 @@ section img {
     object-fit: cover;
     pointer-events: none;
 }
-section img#moon {
+.main-cover img#moon {
     mix-blend-mode: screen;
 }
-section img#mountains_foreground {
+.main-cover img#mountains_foreground {
     z-index: 10;
 }
-.section {
-    position: relative;
+.main-container {
     display: flex;
     flex-direction: column; 
-    background: #460067;
+    background: var(--secondary-color);
 }
-.section h2 {
+.main-container h2 {
     padding: 1em 0;
-    color: #ffbd33;
-    background: #460067;
 }
-.section p {
-    color: #ffbd33;
-}
-.section a {
+.main-container a {
     padding: 0.5rem 2rem;
-    background: #ffbd33;
-    color: #460067;
+    background: var(--light-color);
+    color: var(--secondary-color);
     border-radius: 2rem;
     align-items: center;
 }
-.section a:hover {
-    color: #460067;
-    background: #D59000;
+.main-container a:hover {
+    color: var(--secondary-color);
+    background: var(--dark-color);
 }
-.section article {
+.main-container article {
     padding: 1rem;
-    color: #ffbd33;
 }
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: #670055;
+    background: var(--tertiary-color);
 }
-div h2 {
+.container h2 {
     padding: 2rem 1rem;
-    background: #670055;
-    color: #ffbd33;
 }
-.container p {
-    color: #ffbd33;
-}
-.container a {
-    color: #ffbd33;
+.newswire-container {
+    display: flex;
+    flex-direction: column-reverse;
 }
 .container article {
     padding: 0 1rem 1rem;
-    color: #ffbd33;
-    display: flex;
-    flex-direction: column;
 }
 .container img {
     width: 100%;
-    background: #000;
+    background: black;
     height: 16rem;
     object-fit: scale-down;
 }
@@ -195,7 +178,7 @@ div h2 {
 }
 .container article p#date {
     padding: 1rem 0;
-    color: #D59000;
+    color: var(--dark-color);
 }
 footer {
     position: relative;
@@ -206,13 +189,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: #006746;
+    background: var(--primary-color);
     align-items: center;
     z-index: 100;
 }
 footer p {
     width: 80%;
-    color: #ffbd33;
 }
 footer ul {
     display: flex;
@@ -220,12 +202,14 @@ footer ul {
     /* align-items: center; */
 }
 footer li {
-    list-style: none;
     margin: 0.25rem;
 }
 footer img {
     height: 1rem;
 }
+
+/* Queries */
+
 @media (min-width: 62rem) {
     header {
         width: 100%;
@@ -244,7 +228,7 @@ footer img {
         display: none;
     }
     .logo {
-        width: 19rem;
+        width: 16rem;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -272,13 +256,14 @@ footer img {
         padding-top: .875rem;
         width: 100%;
     }
-    .section {
+    .main-container {
         padding: 4rem;   
     }
     .container {
         padding: 0 4rem 4rem;
-        flex-direction: initial;
-        justify-content: space-evenly;  
+    }
+    .newswire-container {
+        flex-direction: row-reverse;
     }
     .container article {
         width: 24rem;
@@ -291,7 +276,9 @@ footer img {
     } 
 }
 
+/* --------------------------------------------------------------------------- */
 /* Typography */
+/* --------------------------------------------------------------------------- */
 
 * {
     font-family: 'Silkscreen';
@@ -306,22 +293,22 @@ header {
 .index li {
     font-size: 1rem;
 }
-.section {
+.main-container {
     text-align: center;
 }
-.section h2 {
+.main-container h2 {
     font-size: 1.5rem;
 }
-.section p {
+.main-container p {
     text-align: justify;
     font-size: 1rem;
 }
-.section a {
+.main-container a {
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
 }
-div h2 {
+.container h2 {
     text-align: center;
     font-size: 1.5rem;
 }
@@ -343,15 +330,18 @@ footer p {
     text-align: center;
     font-size: 0.5rem;
 }
+
+/* Queries */
+
 @media (min-width: 62rem) {
-    .section h2 {
+    .main-container h2 {
         font-size: 3rem;
     }
-    .section p,
-    .section a {
+    .main-container p,
+    .main-container a {
         font-size: 1rem;
     }
-    div h2 {
+    .container h2 {
         font-size: 3rem;
     }
     .container p,
