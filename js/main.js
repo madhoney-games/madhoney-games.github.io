@@ -1,7 +1,7 @@
-let toggleButton = document.getElementsById('toggle-button'); 
+let toggleButton = document.getElementsByClassName('toggle-button')[0]; 
 let navMenu = document.getElementsByClassName('menu')[0];
 
-toggleButton.addEventListener('click', function(){
+toggleButton.addEventListener('click', () => {
   navMenu.classList.toggle('active')
 })
 
