@@ -183,6 +183,16 @@ header img {
     padding: 1rem 0;
     color: var(--dark-color);
 }
+.games-container {
+    padding: 1rem;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+.games-container img {
+    padding: 1rem;
+    width: 100%;
+}
 footer {
     position: relative;
     top: 0;
@@ -277,6 +287,19 @@ footer img {
         background: black;
         height: 4rem;
         object-fit: scale-down;
+    }
+    .games-container {
+        padding: 4rem;
+        background: var(--secondary-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: var(--border);
+    }
+    .games-container img {
+        border: var(--border);
+        padding: 4rem;
+        height: 100%;
     }
     footer {
         flex-direction: initial;
